@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
 
+    [Header("Logo")]
+    public GameObject logo;
+
     [Header("Zones")]
     public GameObject door;
     public GameObject room;
@@ -97,21 +100,28 @@ public class GameController : MonoBehaviour
 
     public IEnumerator OpenDoor()
     {
-        StartCoroutine(FadeOUTIN());
-        yield return new WaitForSeconds(1f);
-        //StartCoroutine(FirstInteraction());
-        room.SetActive(true);
-        door.SetActive(false);
-    }
+        //StartCoroutine(FadeOUTIN());
 
-    public IEnumerator FadeOUTIN() {
         panelFade.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
+
         yield return new WaitForSeconds(1f);
+        logo.SetActive(true);
+        yield return new WaitForSeconds(.2f);
+        panelFade.SetActive(false);
+
+        yield return new WaitForSeconds(3.8f);
+        panelFade.SetActive(true);
         txtClickToContinue.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeIn");
+
+        logo.SetActive(false);
+        room.SetActive(true);
+        door.SetActive(false);
+
         yield return new WaitForSeconds(1.1f);
         panelFade.SetActive(false);
+
     }
 
     IEnumerator FirstInteraction() {
@@ -119,6 +129,7 @@ public class GameController : MonoBehaviour
 
         CameraController.instance.ChangeCamera(LabelCamera.Desk);
         yield return new WaitForSeconds(2f);
+        panelFade.SetActive(false);
         allRoomElement.GetComponent<PolygonCollider2D>().enabled = false;
         
         txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn the speakers on to enjoy catalogue";
