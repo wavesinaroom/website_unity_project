@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     [Header("Logo")]
     public GameObject logo;
+    public GameObject logoFinal;
 
     [Header("Zones")]
     public GameObject door;
@@ -110,7 +111,7 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(.2f);
         panelFade.SetActive(false);
 
-        yield return new WaitForSeconds(3.8f);
+        yield return new WaitForSeconds(5.3f);
         panelFade.SetActive(true);
         txtClickToContinue.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeIn");
@@ -287,6 +288,7 @@ public class GameController : MonoBehaviour
         panelProjects.SetActive(false);
         panelAbout.SetActive(false);
         panelSoundDesign.SetActive(false);
+        panelSalida.SetActive(false);
     }
 
     public IEnumerator ReturnCamera() {
@@ -360,6 +362,20 @@ public class GameController : MonoBehaviour
     }
 
     public void ResetExperence() {
+        StartCoroutine(WaitExitExperence());
+    }
+
+    IEnumerator WaitExitExperence() {
+
+        panelFade.SetActive(true);
+        panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
+
+        yield return new WaitForSeconds(1f);
+
+        logoFinal.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        panelFade.SetActive(false);
+        yield return new WaitForSeconds(5.5f);
         SceneManager.LoadScene("Main");
     }
 

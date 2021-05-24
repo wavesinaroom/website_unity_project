@@ -54,5 +54,4 @@ public class VideoControllerUI : MonoBehaviour
         //txtTime.text = VideoController.instance.videoPlayer.time.ToString();
     }
 
-
 }
