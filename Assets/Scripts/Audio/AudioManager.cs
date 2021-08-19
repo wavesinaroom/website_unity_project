@@ -18,9 +18,12 @@ public class AudioManager : MonoBehaviour
     [Header("VO")]
     public AudioSource voAudioSource; 
     public List<AudioClip> voClips;  
-    AudioSource storeValueAudioSource;  
-          
+    [Header("Music Portfolio")]
+    public AudioSource musicPortfolioAudioSource;
+    [Header("Sound Design Portfolio")]
+    public AudioSource soundDesignPortfolio;       
     
+    AudioSource storeValueAudioSource;
     private void Awake() 
     {
         if (instance == null)
@@ -42,10 +45,11 @@ public class AudioManager : MonoBehaviour
     {
         
     }
-
+    
     #region Radomize SFX
     /*Gives randomization control over a specified parametre
      Call method from any GameObject script*/
+    /*
     public void RandomizeAssetParametre(ASSET_TYPE assetType, AUDIO_PARAMETERS_LABELS parametre, float paramMin, float paramMax, int randomAssetMin, int randomAssetMax)
     {
         float randomizeValue = Random.Range(paramMin, paramMax);
@@ -88,7 +92,7 @@ public class AudioManager : MonoBehaviour
         }
         
         
-    }
+    }*/
     #endregion
 
 }

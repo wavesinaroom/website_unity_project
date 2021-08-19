@@ -93,6 +93,11 @@ public class GameController : MonoBehaviour
         animator = GetComponent<Animator>();
         room.SetActive(false);
         door.SetActive(true);
+        #region Audio
+        //"Make sure" VO line
+        //AudioManager.instance.voAudioSource.clip = AudioManager.instance.voClips[Random.Range(0,7)];
+        AudioManager.instance.voAudioSource.Play(); 
+        #endregion
     }
 
     #endregion
@@ -122,24 +127,23 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(1.1f);
         panelFade.SetActive(false);
-
+        
     }
 
     IEnumerator FirstInteraction() {
         //yield return new WaitUntil(() => DollyController.instance.dolly.m_PathPosition == 1);
-
         CameraController.instance.ChangeCamera(LabelCamera.Desk);
         yield return new WaitForSeconds(2f);
         panelFade.SetActive(false);
         allRoomElement.GetComponent<PolygonCollider2D>().enabled = false;
         
-        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn the speakers on to enjoy catalogue";
+        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn your speakers";
         spekersLeftObj.UpdateOutline(true);
     }
 
     void SpekersIntro()
     {
-        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn on the screen monitor";
+        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn on your screen monitor";
 
         spekersLeftObj.UpdateOutline(false);
         spekersLeftObj.spriteRenderer.transform.localScale = spekersLeftObj.originalScale;
@@ -155,8 +159,12 @@ public class GameController : MonoBehaviour
         txtClickToContinue.SetActive(false);
         txtScreenGeneral.SetActive(true);
 
-        txtScreenGeneral.GetComponent<TextMeshProUGUI>().text = "Click on the objects to interact with them";
-
+        txtScreenGeneral.GetComponent<TextMeshProUGUI>().text = "Click on the objects";
+        #region Audio
+        //"Click on the objects" VO line
+        //AudioManager.instance.RandomizeAssetParametre(ASSET_TYPE.VO,AUDIO_PARAMETERS_LABELS.VOLUME, 1, 1, 0,10); 
+        //AudioManager.instance.voAudioSource.Play();
+        #endregion
         pantallaObj.spriteRenderer.transform.localScale = pantallaObj.originalScale;
         pantallaObj.UpdateOutline(false);
 
