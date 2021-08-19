@@ -93,11 +93,6 @@ public class GameController : MonoBehaviour
         animator = GetComponent<Animator>();
         room.SetActive(false);
         door.SetActive(true);
-        #region Audio
-        //"Make sure" VO line
-        //AudioManager.instance.voAudioSource.clip = AudioManager.instance.voClips[Random.Range(0,7)];
-        AudioManager.instance.voAudioSource.Play(); 
-        #endregion
     }
 
     #endregion
