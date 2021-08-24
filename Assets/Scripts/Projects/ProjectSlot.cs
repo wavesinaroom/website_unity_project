@@ -33,6 +33,9 @@ public class ProjectSlot : MonoBehaviour
 
     public void EnterClick() {
         animator.SetTrigger("Wave");
+        #region Audio
+        AudioManager.instance.sfxAudioSource[9].Play(); 
+        #endregion
     }
 
     public void ClickOverProject() {

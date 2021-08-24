@@ -24,6 +24,9 @@ public class CursorController : MonoBehaviour
             mousePos.z = 10f;
             worldPos = mainCamera.ScreenToWorldPoint(mousePos);
             Instantiate(prefabWave, worldPos, Quaternion.identity);
+            #region Audio
+            AudioManager.instance.sfxAudioSource[8].Play(); 
+            #endregion
         }
 
         if (!GameController.instance.finishIntro)

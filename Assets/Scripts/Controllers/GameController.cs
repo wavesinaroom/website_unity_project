@@ -93,6 +93,10 @@ public class GameController : MonoBehaviour
         animator = GetComponent<Animator>();
         room.SetActive(false);
         door.SetActive(true);
+        #region Audio
+        AudioManager.instance.musicAudioSource[1].Play();
+        AudioManager.instance.voAudioSource[3].Play();
+        #endregion
     }
 
     #endregion
@@ -102,12 +106,19 @@ public class GameController : MonoBehaviour
     public IEnumerator OpenDoor()
     {
         //StartCoroutine(FadeOUTIN());
-
+        
         panelFade.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
-
-        yield return new WaitForSeconds(1f);
+        #region Audio
+        AudioManager.instance.musicAudioSource[1].Stop();
+        AudioManager.instance.voAudioSource[3].Stop();
+        AudioManager.instance.sfxAudioSource[1].Play();
+        #endregion
+        yield return new WaitForSeconds(3f);
         logo.SetActive(true);
+        #region Audio
+        AudioManager.instance.sfxAudioSource[2].Play(); 
+        #endregion
         yield return new WaitForSeconds(.2f);
         panelFade.SetActive(false);
 
@@ -115,13 +126,17 @@ public class GameController : MonoBehaviour
         panelFade.SetActive(true);
         txtClickToContinue.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeIn");
-
         logo.SetActive(false);
         room.SetActive(true);
-        door.SetActive(false);
-
+        door.SetActive(false);      
+        #region Audio
+        AudioManager.instance.sfxAudioSource[0].Play();
+        AudioManager.instance.voAudioSource[1].Play(); 
+        #endregion
         yield return new WaitForSeconds(1.1f);
         panelFade.SetActive(false);
+        
+        
         
     }
 
@@ -133,13 +148,27 @@ public class GameController : MonoBehaviour
         allRoomElement.GetComponent<PolygonCollider2D>().enabled = false;
         
         txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn your speakers";
+        #region Audio
+        AudioManager.instance.voAudioSource[1].Stop();
+        AudioManager.instance.voAudioSource[7].Play(); 
+        #endregion
         spekersLeftObj.UpdateOutline(true);
     }
 
-    void SpekersIntro()
+    IEnumerator SpekersIntro()
     {
+        #region
+        AudioManager.instance.voAudioSource[7].Stop(); 
+        AudioManager.instance.sfxAudioSource[7].Play();
+        yield return new WaitForSeconds(0.5f);
+        AudioManager.instance.musicAudioSource[0].Play();
+        yield return new WaitForSeconds(0.25f);
+        #endregion
         txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn on your screen monitor";
-
+        yield return new WaitForSeconds(0.25f);
+        #region Audio
+        AudioManager.instance.voAudioSource[6].Play();
+        #endregion
         spekersLeftObj.UpdateOutline(false);
         spekersLeftObj.spriteRenderer.transform.localScale = spekersLeftObj.originalScale;
 
@@ -149,16 +178,18 @@ public class GameController : MonoBehaviour
         //pantallaObj.SetActive(true);
     }
 
-    void ScreenIntro() {
-
+    IEnumerator ScreenIntro() {
+        #region Audio
+        AudioManager.instance.sfxAudioSource[5].Play();
+        yield return new WaitForSeconds(0.5f); 
+        #endregion
         txtClickToContinue.SetActive(false);
         txtScreenGeneral.SetActive(true);
 
         txtScreenGeneral.GetComponent<TextMeshProUGUI>().text = "Click on the objects";
         #region Audio
-        //"Click on the objects" VO line
-        //AudioManager.instance.RandomizeAssetParametre(ASSET_TYPE.VO,AUDIO_PARAMETERS_LABELS.VOLUME, 1, 1, 0,10); 
-        //AudioManager.instance.voAudioSource.Play();
+        AudioManager.instance.voAudioSource[6].Stop();
+        AudioManager.instance.voAudioSource[0].Play(); 
         #endregion
         pantallaObj.spriteRenderer.transform.localScale = pantallaObj.originalScale;
         pantallaObj.UpdateOutline(false);
@@ -197,11 +228,11 @@ public class GameController : MonoBehaviour
                 break;
 
             case LabelElement.ParlanteIntro:
-                SpekersIntro();
+                StartCoroutine(SpekersIntro());
                 break;
 
             case LabelElement.Pantalla:
-                ScreenIntro();
+                StartCoroutine(ScreenIntro());
                 break;
 
             #endregion
@@ -280,6 +311,10 @@ public class GameController : MonoBehaviour
     }
 
     private void ClosePanels() {
+        #region Audio
+        AudioManager.instance.voAudioSource[4].Stop(); 
+        AudioManager.instance.voAudioSource[5].Stop(); 
+        #endregion
         txtScreenGeneral.SetActive(false);
         panelWeb.SetActive(false);
         panelMusicPortfolio.SetActive(false);
@@ -310,6 +345,9 @@ public class GameController : MonoBehaviour
     IEnumerator ShowRetrato() {
         yield return new WaitForSeconds(2f);
         panelAbout.SetActive(true);
+        #region Audio
+        AudioManager.instance.voAudioSource[4].Play(); 
+        #endregion
         //panelAbout.GetComponent<Animator>().SetTrigger("FadeIn");
     }
 
@@ -329,6 +367,9 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         panelWeb.SetActive(true);
         panelTecnologies.SetActive(true);
+        #region Audio
+        AudioManager.instance.voAudioSource[5].Play(); 
+        #endregion
     }
 
     IEnumerator ShowPanelContact() {
@@ -345,6 +386,10 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         panelNote.SetActive(true);
+        yield return new WaitForSeconds(0.05f); 
+        #region Audio
+        AudioManager.instance.sfxAudioSource[4].Play(); 
+        #endregion
     }
 
     IEnumerator ShowPanelProjects() {
@@ -372,11 +417,17 @@ public class GameController : MonoBehaviour
 
         panelFade.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
-
-        yield return new WaitForSeconds(1f);
+        #region Audio
+        AudioManager.instance.voAudioSource[2].Play(); 
+        #endregion 
+        yield return new WaitForSeconds(2f);
+        AudioManager.instance.musicAudioSource[0].Stop(); 
 
         logoFinal.SetActive(true);
         yield return new WaitForSeconds(0.2f);
+        #region Audio
+        AudioManager.instance.sfxAudioSource[3].Play();
+        #endregion
         panelFade.SetActive(false);
         yield return new WaitForSeconds(5.5f);
         SceneManager.LoadScene("Main");

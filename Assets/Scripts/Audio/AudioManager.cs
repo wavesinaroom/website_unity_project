@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum AUDIO_PARAMETERS_LABELS {VOLUME, PITCH};
-public enum ASSET_TYPE {MUSIC, SFX, UISFX, VO}; 
+ 
+public enum RANDOMIZE_AUDIO_CLIPS{TRUE, FALSE};
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance; 
@@ -12,10 +12,9 @@ public class AudioManager : MonoBehaviour
     public List<AudioSource> sfxAudioSource;
     [Header("VO")]
     public List<AudioSource> voAudioSource; 
-     
+    [Header("Marimba")]
+    public List<AudioSource> marimbaAudioSource; 
     
-    
-    AudioSource storeValueAudioSource;
     private void Awake() 
     {
         if (instance == null)
@@ -37,8 +36,7 @@ public class AudioManager : MonoBehaviour
     {
         
     }
-    
-    #region Radomize SFX
+
     /*Gives randomization control over a specified parametre
      Call method from any GameObject script*/
     /*
@@ -59,32 +57,7 @@ public class AudioManager : MonoBehaviour
         }
 
 
-        switch(assetType)
-        {
-            case ASSET_TYPE.MUSIC:
-                musicAudioSource.clip = musicClips[randomAsset]; 
-                musicAudioSource.volume = storeValueAudioSource.volume;
-                musicAudioSource.pitch = storeValueAudioSource.pitch; 
-                break; 
-            case ASSET_TYPE.SFX:
-                sfxAudioSource.clip = sfxClips[randomAsset];
-                sfxAudioSource.volume = storeValueAudioSource.volume;
-                sfxAudioSource.pitch = storeValueAudioSource.pitch;
-                break;
-            case ASSET_TYPE.UISFX:
-                uiSfxAudioSource.clip = uiSfxClips[randomAsset]; 
-                uiSfxAudioSource.volume = storeValueAudioSource.volume;
-                uiSfxAudioSource.pitch = storeValueAudioSource.pitch;
-                break;
-            case ASSET_TYPE.VO:
-                voAudioSource.clip = voClips[randomAsset]; 
-                voAudioSource.volume = storeValueAudioSource.volume;
-                voAudioSource.pitch = storeValueAudioSource.pitch;
-                break; 
-        }
-        
-        
     }*/
-    #endregion
+    
 
 }

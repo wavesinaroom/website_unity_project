@@ -43,7 +43,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -7308850814590022405}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 1
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -69,7 +69,6 @@ AudioMixerController:
     - d9a5ae753ff1c5d46a51de9bb0fb885d
     - dbf5bd7f7f10ba1408ae649f75e08211
     - aba2bac385b119d42be30b91fabb5b7d
-    - 2182e7aae270c4c4aa5b74a1a83f8dcf
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -86,7 +85,6 @@ AudioMixerGroupController:
   - {fileID: -1432553367943658415}
   - {fileID: 2897586467494150866}
   - {fileID: 7010011657730005338}
-  - {fileID: 7591648117432350710}
   m_Volume: c6640cec405d7514396191ed20998dcc
   m_Pitch: 542bf08d3f3a5d84d982cb92c4a2757e
   m_Send: 00000000000000000000000000000000
@@ -137,7 +135,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 4116921156377685411}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 7
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -151,20 +149,6 @@ AudioMixerEffectController:
   m_EffectID: baeaae02b749ad440ac959e12d136cb1
   m_EffectName: Attenuation
   m_MixLevel: 1966b27a0f857094e82da8dfe7a477b7
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &5286933519550247998
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: bd5173d1e8f89ff489296c15b6e57b05
-  m_EffectName: Attenuation
-  m_MixLevel: 40772fd636bd2764c9c51258369da396
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -184,26 +168,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -6011335393848916869}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!243 &7591648117432350710
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UISFX
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 2182e7aae270c4c4aa5b74a1a83f8dcf
-  m_Children: []
-  m_Volume: 8a696e877036fe34d83b7238eadde3d6
-  m_Pitch: d96ed47a900671941ba63d164c0ad414
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 5286933519550247998}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 8
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0

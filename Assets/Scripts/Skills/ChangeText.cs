@@ -33,9 +33,12 @@ public class ChangeText : MonoBehaviour
         }
     }
 
-    public void EnterClick() {
+    public void EnterClick(int noteNumber) {
         transform.localScale = newScale;
         enter = true;
+        #region Audio
+        AudioManager.instance.marimbaAudioSource[noteNumber].Play(); 
+        #endregion
     }
 
     public void ExitClick() {
