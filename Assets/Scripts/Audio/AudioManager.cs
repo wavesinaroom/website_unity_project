@@ -7,21 +7,13 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance; 
     [Header("Music")]
-    public AudioSource musicAudioSource; 
-    public List<AudioClip> musicClips;
+    public List<AudioSource> musicAudioSource; 
     [Header("SFX")]
-    public AudioSource sfxAudioSource;
-    public List<AudioClip> sfxClips;
-    [Header("UISFX")]
-    public AudioSource uiSfxAudioSource;
-    public List<AudioClip> uiSfxClips; 
+    public List<AudioSource> sfxAudioSource;
     [Header("VO")]
-    public AudioSource voAudioSource; 
-    public List<AudioClip> voClips;  
-    [Header("Music Portfolio")]
-    public AudioSource musicPortfolioAudioSource;
-    [Header("Sound Design Portfolio")]
-    public AudioSource soundDesignPortfolio;       
+    public List<AudioSource> voAudioSource; 
+     
+    
     
     AudioSource storeValueAudioSource;
     private void Awake() 
