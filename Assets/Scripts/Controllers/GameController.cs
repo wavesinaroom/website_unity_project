@@ -331,6 +331,12 @@ public class GameController : MonoBehaviour
 
     public IEnumerator ReturnCamera() {
 
+        if(AudioManager.instance.isMusicAudioSourcePaused == true)
+        {
+            AudioManager.instance.musicAudioSource[2].Stop();
+            AudioManager.instance.isMusicAudioSourcePaused = false;
+            AudioManager.instance.musicAudioSource[0].UnPause(); 
+        }
         switch (CameraController.instance.currentCamera) {
             case LabelCamera.Retrato:
                 //panelAbout.GetComponent<Animator>().SetTrigger("FadeOut");
@@ -338,7 +344,6 @@ public class GameController : MonoBehaviour
 
                 break;
         }
-
         CameraController.instance.ReturnCamera();
     }
 
@@ -355,6 +360,12 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         panelWeb.SetActive(true);
         panelMusicPortfolio.SetActive(true);
+        #region Audio 
+        AudioManager.instance.musicAudioSource[0].Pause();
+        AudioManager.instance.isMusicAudioSourcePaused = true;  
+        AudioManager.instance.musicAudioSource[2].clip = MusicPortfolioController.instance.audioClips[2];
+        AudioManager.instance.musicAudioSource[2].Play(); 
+        #endregion
     }
 
     IEnumerator ShowPanelSkills() {

@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public List<AudioSource> voAudioSource; 
     [Header("Marimba")]
     public List<AudioSource> marimbaAudioSource; 
+    public bool isMusicAudioSourcePaused; 
     
     private void Awake() 
     {

@@ -5,23 +5,32 @@ using TMPro;
 
 public class MusicPortfolioController : MonoBehaviour
 {
-
-    public TextMeshProUGUI txtTitle;
-    public TextMeshProUGUI txtGame;
-    public TextMeshProUGUI txtCompany;
-
-    public TextMeshProUGUI txtInformation;
+    [HideInInspector] public static MusicPortfolioController instance; 
+    public List<AudioClip> audioClips; 
+    AudioSource audioSource; 
+     private void Awake() 
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else {
+            Destroy(this.gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>(); 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayMusicPortfolioClip(int slotNumber)
     {
-        
+        audioSource.Stop();
+        audioSource.clip = audioClips[slotNumber]; 
+        audioSource.Play(); 
     }
+
 }
 
