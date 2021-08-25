@@ -21,11 +21,13 @@ public class VideoController : MonoBehaviour
         if (instance == null) {
             instance = this;
         }
+        
     }
 
     private void OnDisable()
     {
         instance = null;
+       
     }
 
     void Start()

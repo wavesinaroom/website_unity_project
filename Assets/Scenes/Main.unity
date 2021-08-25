@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:35 - 01:20
+  m_text: 00:26 - 01:04
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0fdf0565f326d04ab330672bb1f1b33, type: 2}
   m_sharedMaterial: {fileID: -2050440166043314751, guid: c0fdf0565f326d04ab330672bb1f1b33,
@@ -8858,7 +8858,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 35
+          m_FloatArgument: 26
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -18615,7 +18615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:01 - 00:34
+  m_text: 00:00 - 00:26
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0fdf0565f326d04ab330672bb1f1b33, type: 2}
   m_sharedMaterial: {fileID: -2050440166043314751, guid: c0fdf0565f326d04ab330672bb1f1b33,
@@ -32730,7 +32730,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 81
+          m_FloatArgument: 64
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -46623,7 +46623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1566950373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54141,7 +54141,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 0
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -54158,7 +54158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63708caba0abd24596919607b878eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: wiar.mp4
+  path: sfx_waves_in_a_room_sound_design_reel_unity_project.mp4
   videoPlayer: {fileID: 0}
   active: 0
   volume: 1
@@ -57063,7 +57063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 01:21 - 02:00
+  m_text: 01:04 - 01:28
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0fdf0565f326d04ab330672bb1f1b33, type: 2}
   m_sharedMaterial: {fileID: -2050440166043314751, guid: c0fdf0565f326d04ab330672bb1f1b33,

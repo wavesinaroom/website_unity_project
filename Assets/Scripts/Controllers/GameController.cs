@@ -330,7 +330,7 @@ public class GameController : MonoBehaviour
     }
 
     public IEnumerator ReturnCamera() {
-
+        #region Audio
         if(AudioManager.instance.isMusicAudioSourcePaused == true)
         {
             AudioManager.instance.sfxAudioSource[6].Stop(); 
@@ -338,6 +338,7 @@ public class GameController : MonoBehaviour
             AudioManager.instance.isMusicAudioSourcePaused = false;
             AudioManager.instance.musicAudioSource[0].UnPause(); 
         }
+        #endregion
         switch (CameraController.instance.currentCamera) {
             case LabelCamera.Retrato:
                 //panelAbout.GetComponent<Animator>().SetTrigger("FadeOut");
@@ -417,7 +418,6 @@ public class GameController : MonoBehaviour
         #region Audio
         AudioManager.instance.musicAudioSource[0].Pause();
         AudioManager.instance.isMusicAudioSourcePaused = true;
-        AudioManager.instance.sfxAudioSource[6].Play();
         #endregion
     }
 
