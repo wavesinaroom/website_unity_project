@@ -128,6 +128,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220504618}
     m_Modifications:
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 672321471}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayMusicPortfolioClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091327095615504205, guid: 8f772840cf191ef4b8e20a4337bca950,
         type: 3}
       propertyPath: imgBig
@@ -4935,7 +4970,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232493493}
-  - component: {fileID: 232493494}
   m_Layer: 5
   m_Name: PanelMusic
   m_TagString: Untagged
@@ -4966,22 +5000,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &232493494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232493492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74bd0a0420a0ba3478b7b81a30ac098f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtTitle: {fileID: 1194797627}
-  txtGame: {fileID: 2134781050}
-  txtCompany: {fileID: 1166884051}
-  txtInformation: {fileID: 98662707}
 --- !u!1 &237998414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,6 +5088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252082766}
   - component: {fileID: 252082767}
+  - component: {fileID: 252082768}
   m_Layer: 0
   m_Name: SoundDesignReel
   m_TagString: Untagged
@@ -5104,7 +5123,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 8fee85c0843c956439d793494199a9c4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5188,6 +5207,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &252082768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252082765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec957bda7b7b110468cc7670ef23211a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &265458502
 GameObject:
   m_ObjectHideFlags: 0
@@ -7900,6 +7931,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220504618}
     m_Modifications:
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 672321471}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayMusicPortfolioClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091327095615504205, guid: 8f772840cf191ef4b8e20a4337bca950,
         type: 3}
       propertyPath: imgBig
@@ -10034,6 +10100,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220504618}
     m_Modifications:
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 672321471}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayMusicPortfolioClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091327095615504205, guid: 8f772840cf191ef4b8e20a4337bca950,
         type: 3}
       propertyPath: imgBig
@@ -16258,6 +16359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672321469}
   - component: {fileID: 672321470}
+  - component: {fileID: 672321471}
   m_Layer: 0
   m_Name: MusicPortfolio
   m_TagString: Untagged
@@ -16376,6 +16478,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &672321471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672321468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bd0a0420a0ba3478b7b81a30ac098f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: f70453ac8a9322c4f8b4247573705996, type: 3}
+  - {fileID: 8300000, guid: 8249a2bc6bc8f0746b461bdda584e398, type: 3}
+  - {fileID: 8300000, guid: b92a0d0e87ac00447b23f574819d6ea0, type: 3}
+  - {fileID: 8300000, guid: 4a2699e3b5ee93943a621693ba197409, type: 3}
+  - {fileID: 8300000, guid: 27716c1819e31f5428ea460178451bda, type: 3}
 --- !u!1001 &680421865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24320,6 +24440,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220504618}
     m_Modifications:
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 672321471}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayMusicPortfolioClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091327095615504205, guid: 8f772840cf191ef4b8e20a4337bca950,
         type: 3}
       propertyPath: imgBig
@@ -26832,6 +26982,7 @@ MonoBehaviour:
   - {fileID: 642383448}
   - {fileID: 175664975}
   - {fileID: 532970958}
+  isMusicAudioSourcePaused: 0
 --- !u!4 &973203852
 Transform:
   m_ObjectHideFlags: 0
@@ -54010,7 +54161,7 @@ MonoBehaviour:
   path: wiar.mp4
   videoPlayer: {fileID: 0}
   active: 0
-  volume: 0
+  volume: 1
 --- !u!1001 &1930779811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59654,6 +59805,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220504618}
     m_Modifications:
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 672321471}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayMusicPortfolioClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658993227782427864, guid: 8f772840cf191ef4b8e20a4337bca950,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5091327095615504205, guid: 8f772840cf191ef4b8e20a4337bca950,
         type: 3}
       propertyPath: imgBig

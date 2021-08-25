@@ -333,6 +333,7 @@ public class GameController : MonoBehaviour
 
         if(AudioManager.instance.isMusicAudioSourcePaused == true)
         {
+            AudioManager.instance.sfxAudioSource[6].Stop(); 
             AudioManager.instance.musicAudioSource[2].Stop();
             AudioManager.instance.isMusicAudioSourcePaused = false;
             AudioManager.instance.musicAudioSource[0].UnPause(); 
@@ -413,6 +414,11 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         panelWeb.SetActive(true);
         panelSoundDesign.SetActive(true);
+        #region Audio
+        AudioManager.instance.musicAudioSource[0].Pause();
+        AudioManager.instance.isMusicAudioSourcePaused = true;
+        AudioManager.instance.sfxAudioSource[6].Play();
+        #endregion
     }
 
     IEnumerator ShowPanelSalida() {
@@ -430,9 +436,9 @@ public class GameController : MonoBehaviour
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
         #region Audio
         AudioManager.instance.voAudioSource[2].Play(); 
-        #endregion 
         yield return new WaitForSeconds(2f);
         AudioManager.instance.musicAudioSource[0].Stop(); 
+        #endregion 
 
         logoFinal.SetActive(true);
         yield return new WaitForSeconds(0.2f);
