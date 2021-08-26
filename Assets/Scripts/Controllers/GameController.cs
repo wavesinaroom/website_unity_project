@@ -314,7 +314,6 @@ public class GameController : MonoBehaviour
         #region Audio
         AudioManager.instance.voAudioSource[4].Stop(); 
         AudioManager.instance.voAudioSource[5].Stop(); 
-        AudioManager.instance.voAudioSource[9].Stop(); 
         #endregion
         txtScreenGeneral.SetActive(false);
         panelWeb.SetActive(false);
