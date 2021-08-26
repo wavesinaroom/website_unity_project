@@ -314,6 +314,7 @@ public class GameController : MonoBehaviour
         #region Audio
         AudioManager.instance.voAudioSource[4].Stop(); 
         AudioManager.instance.voAudioSource[5].Stop(); 
+        AudioManager.instance.voAudioSource[9].Stop(); 
         #endregion
         txtScreenGeneral.SetActive(false);
         panelWeb.SetActive(false);
@@ -388,11 +389,17 @@ public class GameController : MonoBehaviour
     IEnumerator ShowPanelContact() {
         yield return new WaitForSeconds(2f);
         panelContact.SetActive(true);
+        #region Audio
+        AudioManager.instance.sfxAudioSource[10].Play(); 
+        #endregion
     }
 
     IEnumerator ShowPanelCredit() {
         yield return new WaitForSeconds(2f);
         panelCredits.SetActive(true);
+        #region Audio
+        AudioManager.instance.voAudioSource[8].Play(); 
+        #endregion
     }
 
     IEnumerator ShowPanelNotebook()
