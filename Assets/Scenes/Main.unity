@@ -938,10 +938,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: 'There''s no tiny project to start a game audio career with. In my case
-        Shapes and Friends was my kick-start in the industry as it quickly took me
-        to more projects. I composed audio assets and designed UI sound effects to
-        enhance toddler''s experience. '
+      value: 'Short and special iOS iPad app for toddlers I was pleased to compose
+        music for. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -3638,6 +3636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Time
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
         type: 3}
@@ -9140,9 +9143,9 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: "Deka-Dence was one of those moments I had to think outside of the box!
+      value: Deka-Dence was one of those moments I had to think outside of the box!
         My work as a composer was to find the perfect music language that would reflect
-        a post-apocalyptic world.\r"
+        a post-apocalyptic world.
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -16739,10 +16742,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: I also built a game audio community from my previous experience delivering
-        a Game Audio course. We named that community Hablemos de Game Audio and we
-        produced nearly 32 online shows dedicated to Game Audio analysis plus an
-        international Game Audio Jam.
+      value: 'Game audio community with 32 weekly shows in two years and a Game Audio
+        Jam that featured individuals from Ubisoft, EA and Audiokinetic. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -19388,10 +19389,9 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: 'MusicUso is a huge music world carefully designed for kids. Its size
-        and complexity demands a large audio production that includes nursery rhymes
-        arrangements, sound effects design, lessons planning and character dialogue
-        writings. '
+      value: "Audio production for a huge music world carefully designed for kids.
+        My output included music scores, sound effects and lessons planning among
+        others. \t"
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -20781,11 +20781,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 9100000, guid: ae5a1236e707fe8469b81b0dc7b7da54, type: 2}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_Time
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 970874715
       objectReference: {fileID: 0}
     - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
         type: 3}
@@ -20881,6 +20901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.colorGradient.m_NumColorKeys
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622703098827752258, guid: 5863662fb51e78c4097cbc6d06bbd72b,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.8045113
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5863662fb51e78c4097cbc6d06bbd72b, type: 3}
@@ -22350,10 +22375,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: 'Online course for the biggest Hispanic Online education platform. The
-        syllabus includes basic audio theory, sound design techniques and sound design
-        implementation modules that provide enough training to undertake any indie
-        project. '
+      value: 'Sound Design Online course tutor for the biggest online platform in
+        the hispanic world. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -32084,10 +32107,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: 'As an in-house composer I was asked to compose orchestral music that
-        was inspired by the heroic spirit commonly found in Bruckner''s works. As
-        a sound designer on the other hand I was asked to be in charge of the whole
-        SFX production. '
+      value: "\rMusic composer of orchestral pieces that accompany epic battles and
+        sound design for galactic warfare.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -33161,10 +33182,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: Golden Hands is one of those bright ideas that need to see the light
-        soon. Its core concept and polished concept art are a promise of an exceptional
-        development process. However, the game needed a main theme that could give
-        it an assertive impression to potential investors.
+      value: Music composition for a game project that wanted to make the world a
+        brighter place.
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -43347,9 +43366,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: The 2014 Australian Piano Fair edition gave me the opportunity to invite
-        people to experience music from a different perspective. Our remarkable concert
-        got great acceptance of the audience while Channel 7 news covered it.
+      value: 'The 2014 Australia Piano Fair edition gathered 70 pianists to perform
+        my arrangement of Ode to joy under my conducting. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -47819,10 +47837,9 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: 'Exorcist is a RPG mobile game based on The Divine Comedy by Dante Alighieri
-        where an Exorcist captures underworld creatures in his book of shadows. The
-        game combines a medieval universe with some contemporary features that make
-        this game an exciting adventure for any gamer. '
+      value: Exorcist is an RPG mobile game based on The Divine Comedy by Dante Alighieri
+        I composed music for based on my previous music experience with a namesake
+        work.
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -53392,9 +53409,9 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: '"Sonidos de vida" is a full length album featuring nine songs by enthusiastic
-        musicians. My role during the production of the album included consultancy,
-        music production, mixing and mastering tracks.'
+      value: 'Full length album with a powerful message for today''s world that brings
+        together inspiration from ancient indiginous music, folk and some contemporary
+        influences. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -54210,9 +54227,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: I was hired by this Big Monster to compose music with a strong Mexican
-        influence. Besides, my contributions to the game included a set of SFX that
-        completed the experience of having fun while saving water.
+      value: "\rWater Town was a project that showed how to work on an audio production
+        with a strong cultural influence. \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -54935,9 +54951,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: My job was to work closely with the lead programmer to integrate the
-        audio experience into the game as well as building up a repository system
-        that supports Fmod sessions and integrations with Unity3D game engine.
+      value: Colombian Crea Digital Call winner game where players explore an apocalyptic
+        ocean that still has a bright future ahead.
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -55226,10 +55241,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: Legends of the Brawl let me build up an audio production team from the
-        ground as well as a creativity environment to produce and implement top notch
-        SFX for Teddy and his adventures. Working on Legends of the Brawl was a combination
-        of sound design and laughter.
+      value: 'Audio leader of a team of three peeps for an awesome third person adventure
+        game with a humorous flare. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
@@ -60924,9 +60937,8 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.information
-      value: "I exhaustively worked on producing a suitable course for beginners
-        that could provide thorough training on music production foundations since
-        Game Audio isn't popular among Colombian game developers\r"
+      value: 'Game audio community with 32 weekly shows in two years and a Game Audio
+        Jam that featured individuals from Ubisoft, EA and Audiokinetic. '
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}

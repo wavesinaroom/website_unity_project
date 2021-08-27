@@ -153,6 +153,7 @@ public class GameController : MonoBehaviour
         AudioManager.instance.voAudioSource[7].Play(); 
         #endregion
         spekersLeftObj.UpdateOutline(true);
+        spekersRigthObj.UpdateOutline(true);
     }
 
     IEnumerator SpekersIntro()
@@ -171,9 +172,9 @@ public class GameController : MonoBehaviour
         #endregion
         spekersLeftObj.UpdateOutline(false);
         spekersLeftObj.spriteRenderer.transform.localScale = spekersLeftObj.originalScale;
-
+        spekersRigthObj.UpdateOutline(false);
+        spekersRigthObj.spriteRenderer.transform.localScale = spekersRigthObj.originalScale;
         pantallaObj.UpdateOutline(true);
-
         //finishIntro = true;
         //pantallaObj.SetActive(true);
     }
