@@ -36,6 +36,8 @@ public class GameController : MonoBehaviour
     public Element postItObj;
     public Element phoneObj;
 
+    public Element pinkWall; 
+
     public PolygonCollider2D doorCollider; 
 
     [Header("Informations panels")]
@@ -138,9 +140,6 @@ public class GameController : MonoBehaviour
         #endregion
         yield return new WaitForSeconds(1.1f);
         panelFade.SetActive(false);
-        
-        
-        
     }
 
     IEnumerator FirstInteraction() {
@@ -463,7 +462,6 @@ public class GameController : MonoBehaviour
     #endregion
 
     #region Screens
-
     IEnumerator FadeScreen(SpriteRenderer sprite, float newValue) {
         bool fade = true;
         Color newColor = new Color();
@@ -486,7 +484,5 @@ public class GameController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
-
     #endregion
-
 }

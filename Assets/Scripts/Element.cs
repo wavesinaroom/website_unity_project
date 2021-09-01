@@ -5,7 +5,7 @@ using UnityEngine.U2D;
 
 public enum LabelElement { 
     Door, ParlanteIntro, Retrato, ControlXbox, Salir, IntroScreen, Mouse, 
-    Consola, Teclado, Piano, Pantalla, Fox, Toky, Libreta, PostIt, AllRoom, Phone, None
+    Consola, Teclado, Piano, Pantalla, Fox, Toky, Libreta, PostIt, AllRoom, Phone, Wall, None
 }
 
 public class Element : MonoBehaviour

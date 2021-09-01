@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: 5
+  trail: {fileID: 0}
   spriteRenderer: {fileID: 0}
   outlineMaterial: {fileID: 0}
   defaultMaterial: {fileID: 0}
@@ -55,6 +56,8 @@ MonoBehaviour:
   max: 250
   colorNormal: {r: 0, g: 0, b: 0, a: 0}
   colorOver: {r: 0, g: 0, b: 0, a: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  newScale: {x: 0, y: 0, z: 0}
   interactuable: 0
   active: 0
 --- !u!1971053207 &5322661458504712706
