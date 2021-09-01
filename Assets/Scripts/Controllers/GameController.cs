@@ -69,6 +69,8 @@ public class GameController : MonoBehaviour
     [Header("UI Text")]
     public GameObject txtClickToContinue;
     public GameObject txtScreenGeneral;
+    [SerializeField] GameObject initTxt; 
+    [SerializeField] GameObject headphones; 
 
     public bool finishIntro;
 
@@ -77,7 +79,6 @@ public class GameController : MonoBehaviour
     #endregion
 
     #region Init
-
     private void Awake()
     {
         if (instance == null)
@@ -92,6 +93,18 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    #if UNITY_WEBGL
+        pinkWall.active = true;
+        doorCollider.enabled = false; 
+        initTxt.GetComponent<TextMeshProUGUI>().text = "Hey! Just click on the wall to get started";
+        headphones.SetActive(false); 
+        #region Audio
+        AudioManager.instance.musicAudioSource[1].Play();
+        AudioManager.instance.voAudioSource[3].Play();
+        #endregion
+    #endif
+    #if UNITY_STANDALONE_WIN    
+        pinkWall.active = false; 
         finishIntro = false;
         panelFade.SetActive(false);
         animator = GetComponent<Animator>();
@@ -101,12 +114,24 @@ public class GameController : MonoBehaviour
         AudioManager.instance.musicAudioSource[1].Play();
         AudioManager.instance.voAudioSource[3].Play();
         #endregion
+    #endif
     }
 
-    #endregion
+    #endregion Init 
+    
 
     #region Introduction
 
+    #if UNITY_WEBGL
+    public IEnumerator WallIntro()
+    {
+        yield return new WaitForSeconds(0.5f);
+        initTxt.GetComponent<TextMeshProUGUI>().text = "Make sure you have your headphones on to get a better audio experience in the room";
+        headphones.SetActive(true); 
+        pinkWall.active = false;  
+        doorCollider.enabled = true;  
+    }
+    #endif
     public IEnumerator OpenDoor()
     {
         //StartCoroutine(FadeOUTIN());
@@ -225,6 +250,11 @@ public class GameController : MonoBehaviour
         switch (label) {
 
             #region Intro
+        #if UNITY_WEBGL
+            case LabelElement.Wall:
+                StartCoroutine(WallIntro()); 
+                break;
+        #endif
             case LabelElement.IntroScreen:
                 //StartCoroutine(DollyController.instance.MoveDollyToPosition(1));
                 StartCoroutine(FirstInteraction());
