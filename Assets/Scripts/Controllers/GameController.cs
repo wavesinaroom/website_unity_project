@@ -36,6 +36,8 @@ public class GameController : MonoBehaviour
     public Element postItObj;
     public Element phoneObj;
 
+    public PolygonCollider2D doorCollider; 
+
     [Header("Informations panels")]
     public GameObject panelWeb;
     [Space]
@@ -109,6 +111,7 @@ public class GameController : MonoBehaviour
         
         panelFade.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
+        doorCollider.enabled = false; 
         #region Audio
         AudioManager.instance.musicAudioSource[1].Stop();
         AudioManager.instance.voAudioSource[3].Stop();
