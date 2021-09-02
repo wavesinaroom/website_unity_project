@@ -96,6 +96,7 @@ public class GameController : MonoBehaviour
     {
     #if UNITY_WEBGL
         pinkWall.active = true;
+        room.SetActive(false); 
         doorCollider.enabled = false; 
         initTxt.GetComponent<TextMeshProUGUI>().text = "Hey! Just click on the wall to get started";
         headphones.SetActive(false); 

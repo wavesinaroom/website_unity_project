@@ -5113,7 +5113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &232493493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5130,7 +5130,6 @@ RectTransform:
   - {fileID: 220504618}
   - {fileID: 1811359732}
   - {fileID: 293641662}
-  - {fileID: 950651489}
   m_Father: {fileID: 370778147}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10145,6 +10144,7 @@ RectTransform:
   m_Children:
   - {fileID: 140431548}
   - {fileID: 1642786039}
+  - {fileID: 950651489}
   m_Father: {fileID: 1937697907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22398,6 +22398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5322661458504712706, guid: 0ed6629dc74bdac42825e3683229707b,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322661458504712706, guid: 0ed6629dc74bdac42825e3683229707b,
+        type: 3}
       propertyPath: m_ShapeTexture
       value: 
       objectReference: {fileID: 2800000, guid: cda7f4cf6846a9e45891fcdd024deff7, type: 3}
@@ -25635,7 +25640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &950651486
 Animator:
   serializedVersion: 3
@@ -25760,15 +25765,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950651485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8417.768}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
-  m_Father: {fileID: 232493493}
-  m_RootOrder: 5
+  m_Father: {fileID: 394336065}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: 242}
+  m_AnchoredPosition: {x: -4.100006, y: 54.899963}
   m_SizeDelta: {x: 112.78677, y: 8.372627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &963206118
