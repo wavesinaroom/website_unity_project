@@ -71,6 +71,7 @@ public class GameController : MonoBehaviour
     public GameObject txtScreenGeneral;
     [SerializeField] GameObject initTxt; 
     [SerializeField] GameObject headphones; 
+    [SerializeField] GameObject visualizerWarning; 
 
     public bool finishIntro;
 
@@ -360,6 +361,9 @@ public class GameController : MonoBehaviour
         panelAbout.SetActive(false);
         panelSoundDesign.SetActive(false);
         panelSalida.SetActive(false);
+    #if UNITY_WEBGL
+        visualizerWarning.SetActive(false);
+    #endif
     }
 
     public IEnumerator ReturnCamera() {
@@ -395,6 +399,9 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         panelWeb.SetActive(true);
         panelMusicPortfolio.SetActive(true);
+    #if UNITY_WEBGL
+        visualizerWarning.SetActive(true); 
+    #endif
         #region Audio 
         AudioManager.instance.musicAudioSource[0].Pause();
         AudioManager.instance.isMusicAudioSourcePaused = true;  
