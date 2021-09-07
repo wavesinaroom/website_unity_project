@@ -176,7 +176,7 @@ public class GameController : MonoBehaviour
         panelFade.SetActive(false);
         allRoomElement.GetComponent<PolygonCollider2D>().enabled = false;
         
-        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn your speakers";
+        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "- Turn on your speakers -";
         #region Audio
         AudioManager.instance.voAudioSource[1].Stop();
         AudioManager.instance.voAudioSource[7].Play(); 
@@ -194,7 +194,7 @@ public class GameController : MonoBehaviour
         AudioManager.instance.musicAudioSource[0].Play();
         yield return new WaitForSeconds(0.25f);
         #endregion
-        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "Turn on your screen monitor";
+        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "- Turn on your screen monitor -";
         yield return new WaitForSeconds(0.25f);
         #region Audio
         AudioManager.instance.voAudioSource[6].Play();
@@ -213,10 +213,9 @@ public class GameController : MonoBehaviour
         AudioManager.instance.sfxAudioSource[5].Play();
         yield return new WaitForSeconds(0.5f); 
         #endregion
-        txtClickToContinue.SetActive(false);
-        txtScreenGeneral.SetActive(true);
-
-        txtScreenGeneral.GetComponent<TextMeshProUGUI>().text = "Click on the objects";
+        //txtClickToContinue.SetActive(false);
+        //txtScreenGeneral.SetActive(true);
+        txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "- Click on the objects -";
         #region Audio
         AudioManager.instance.voAudioSource[6].Stop();
         AudioManager.instance.voAudioSource[0].Play(); 
@@ -236,7 +235,7 @@ public class GameController : MonoBehaviour
         tokyObj.UpdateOutline(true);
         notebookObj.UpdateOutline(true);
 
-
+        CameraController.instance.ReturnCamera(); 
         allRoomElement.transform.position = new Vector3(-0.19f, -0.86f, 8.5f);
         allRoomElement.label = LabelElement.AllRoom;
         allRoomElement.GetComponent<SpriteShapeRenderer>().sortingLayerName = "Background";
