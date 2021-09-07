@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
 
     public Element pinkWall; 
 
-    public PolygonCollider2D doorCollider; 
+    public GameObject doorCollider; 
 
     [Header("Informations panels")]
     public GameObject panelWeb;
@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
     #if UNITY_WEBGL
         pinkWall.active = true;
         room.SetActive(false); 
-        doorCollider.enabled = false; 
+        doorCollider.GetComponent<Element>().interactuable = false;  
         initTxt.GetComponent<TextMeshProUGUI>().text = "Hey! Just click on the wall to get started";
         headphones.SetActive(false); 
         #region Audio
@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour
         initTxt.GetComponent<TextMeshProUGUI>().text = "Make sure you have your headphones on to get a better audio experience in the room";
         headphones.SetActive(true); 
         pinkWall.active = false;  
-        doorCollider.enabled = true;  
+        doorCollider.GetComponent<Element>().interactuable = true;  
     }
     #endif
     public IEnumerator OpenDoor()
@@ -140,7 +140,7 @@ public class GameController : MonoBehaviour
         
         panelFade.SetActive(true);
         panelFade.GetComponent<Animator>().SetTrigger("FadeOut");
-        doorCollider.enabled = false; 
+        doorCollider.GetComponent<Element>().interactuable = false;  
         #region Audio
         AudioManager.instance.musicAudioSource[1].Stop();
         AudioManager.instance.voAudioSource[3].Stop();
