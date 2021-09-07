@@ -4352,7 +4352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I\u2019ll see you around next time"
+  m_text: Click on the door to exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0fdf0565f326d04ab330672bb1f1b33, type: 2}
   m_sharedMaterial: {fileID: -2050440166043314751, guid: c0fdf0565f326d04ab330672bb1f1b33,
@@ -8788,7 +8788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 127.6001}
+  m_AnchoredPosition: {x: 0, y: 114.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317503911
@@ -43493,7 +43493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 49, y: 535}
+  m_AnchoredPosition: {x: 49, y: 530}
   m_SizeDelta: {x: 118.96384, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497120033
@@ -48474,7 +48474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152.8, y: 202.2}
+  m_AnchoredPosition: {x: 152.8, y: 100.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601949010

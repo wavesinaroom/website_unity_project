@@ -213,7 +213,6 @@ public class GameController : MonoBehaviour
         AudioManager.instance.sfxAudioSource[5].Play();
         yield return new WaitForSeconds(0.5f); 
         #endregion
-        //txtClickToContinue.SetActive(false);
         //txtScreenGeneral.SetActive(true);
         txtClickToContinue.GetComponent<TextMeshProUGUI>().text = "- Click on the objects -";
         #region Audio
@@ -243,6 +242,7 @@ public class GameController : MonoBehaviour
     }
 
 
+        
     #endregion
 
     #region InteraccionesObjetos
@@ -349,7 +349,7 @@ public class GameController : MonoBehaviour
         AudioManager.instance.voAudioSource[4].Stop(); 
         AudioManager.instance.voAudioSource[5].Stop(); 
         #endregion
-        txtScreenGeneral.SetActive(false);
+        txtClickToContinue.SetActive(false);
         panelWeb.SetActive(false);
         panelMusicPortfolio.SetActive(false);
         panelSkills.SetActive(false);
