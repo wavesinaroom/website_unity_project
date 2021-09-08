@@ -76,6 +76,7 @@ public class GameController : MonoBehaviour
     public bool finishIntro;
 
     private Animator animator;
+    static bool isExperienceOver = false; 
 
     #endregion
 
@@ -95,15 +96,27 @@ public class GameController : MonoBehaviour
     void Start()
     {
     #if UNITY_WEBGL
-        pinkWall.active = true;
-        room.SetActive(false); 
-        doorCollider.GetComponent<Element>().interactuable = false;  
-        initTxt.GetComponent<TextMeshProUGUI>().text = "Hey! Just click on the wall to get started";
-        headphones.SetActive(false); 
-        #region Audio
-        AudioManager.instance.musicAudioSource[1].Play();
-        AudioManager.instance.voAudioSource[3].Play();
-        #endregion
+        Debug.Log(isExperienceOver); 
+        if(isExperienceOver == true) {
+            pinkWall.active = true;
+            room.SetActive(false); 
+            doorCollider.GetComponent<Element>().interactuable = false; 
+            #region Audio
+            AudioManager.instance.musicAudioSource[1].Play();
+            AudioManager.instance.voAudioSource[3].Play();
+            #endregion
+            StartCoroutine(WallIntro()); 
+        }else{
+            pinkWall.active = true;
+            room.SetActive(false); 
+            doorCollider.GetComponent<Element>().interactuable = false;  
+            initTxt.GetComponent<TextMeshProUGUI>().text = "Hey! Just click on the wall to get started";
+            headphones.SetActive(false); 
+            #region Audio
+            AudioManager.instance.musicAudioSource[1].Play();
+            AudioManager.instance.voAudioSource[3].Play();
+            #endregion
+        }
     #endif
     #if UNITY_STANDALONE_WIN    
         pinkWall.active = false; 
@@ -493,6 +506,7 @@ public class GameController : MonoBehaviour
         #endregion
         panelFade.SetActive(false);
         yield return new WaitForSeconds(5.5f);
+        isExperienceOver = true; 
         SceneManager.LoadScene("Main");
     }
 
