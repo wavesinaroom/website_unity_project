@@ -22640,7 +22640,7 @@ PrefabInstance:
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}
       propertyPath: info.link
-      value: 
+      value: https://platzi.com/cursos/tecnicas-audio-videojuegos/
       objectReference: {fileID: 0}
     - target: {fileID: 6522179477638377389, guid: ac9e47f0d4cb68c45bd8ac153ca8b360,
         type: 3}

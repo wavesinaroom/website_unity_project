@@ -31,7 +31,6 @@ public class SlotMusic : MonoBehaviour
 
     public bool active;
 
-
     public void ChangeInformationMusic() {
         if (!active) {
             active = true;
@@ -49,6 +48,7 @@ public class SlotMusic : MonoBehaviour
             }
 
             last = this;
+            
         }
     }
 

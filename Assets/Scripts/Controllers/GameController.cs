@@ -412,6 +412,7 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         panelWeb.SetActive(true);
         panelMusicPortfolio.SetActive(true);
+        
     #if UNITY_WEBGL
         visualizerWarning.SetActive(true); 
     #endif
