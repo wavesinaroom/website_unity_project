@@ -31,6 +31,15 @@ public class SlotMusic : MonoBehaviour
 
     public bool active;
 
+    private void Start() {
+        if(gameObject.name == "Slot1")
+        {
+            active = true;
+            last = this; 
+            imgOutline.enabled = true; 
+        }
+    }
+
     public void ChangeInformationMusic() {
         if (!active) {
             active = true;
